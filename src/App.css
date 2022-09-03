@@ -1,0 +1,482 @@
+main { 
+  height: 100%;
+ font-family: 'MS Sans Serif';
+ letter-spacing: 0.001em;
+ font-size: 14px;
+ font-smooth: none;
+}
+
+strong {
+ font-weight: bold;
+}
+
+#desktop {
+ background: teal;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.window {
+ -webkit-font-smoothing: auto!important;
+}
+.title-bar {
+-webkit-font-smoothing: auto!important;
+}
+.input {
+-webkit-font-smoothing: auto!important;
+}
+
+button {
+  -webkit-font-smoothing: auto!important;
+}
+
+/* COLUMNS */
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 10px;
+box-sizing: border-box;
+overflow: hidden;
+}
+.left {
+width: 10%;
+}
+.middle {
+width: 44%;
+padding-top: 40px;
+}
+.right {
+width: 44%;
+}
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* MEDIA SCREEN Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+  width: 100%;
+}
+}
+
+@media (max-width: 1021px) {
+ #desktop {
+   display:none;
+    overflow-y: hidden;
+ } 
+
+.alertmessage {
+  display:block;
+  justify-content: center;
+  margin: 20px;
+} /* Put message in this div and display none in normal css queries. */
+}
+
+@media (min-width: 1021px) {
+.alertmessage {
+display: none;
+}
+}
+
+
+/* WALLET BOX STUFFS - AND WINDOW BODY! */
+.walletconnect {
+position: absolute;
+z-index: 2000;
+margin-top: 350px;
+margin-left: 250px;
+}
+
+.window-body h5 {
+font-size: 11px;
+}
+
+.window-body p {
+font-size: 12px;
+}
+
+
+/* BACKGROUND CONTENT */
+.desktop-icons .desktop-icon {
+ width: 115px;
+ height: 100px;
+ color: #fff;
+ text-align: center;
+ background: no-repeat center top;
+ padding-top: 55px;
+ margin: 10px;
+ box-sizing: border-box;
+}
+.desktop-icons .desktop-icon.my-computer {
+ background-image: url(./images/computer.png);
+}
+.desktop-icons .desktop-icon.my-documents {
+ background-image: url(./images/docs.png);
+}
+.desktop-icons .desktop-icon.network {
+ background-image: url(./images/network.png);
+}
+
+.startbar {
+position: fixed;
+}
+
+#toolbar {
+ background: #c0c0c0;
+ height: 35px;
+ width: 100%;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ border-top: 2px solid #fff;
+}
+#toolbar .toolbar-start-menu {
+ float: left;
+}
+#toolbar .toolbar-start-menu .start-button {
+ background: url(src/images/windowslogo.png) no-repeat 2px center / 24px;
+ padding-left: 28px;
+ padding-right: 5px;
+ height: 29px;
+ margin: 2px 3px;
+ font-weight: bold;
+ border: 2px solid #7c7c7c;
+ border-top-color: #fff;
+ border-left-color: #fff;
+}
+#toolbar .toolbar-start-menu .start-button:hover {
+ background-color: #a7a7a7;
+}
+#toolbar .toolbar-separator {
+ width: 2px;
+ height: 26px;
+ margin-top: 2px;
+ background: #797979;
+ float: left;
+ border-right: 1px solid #fff;
+}
+#toolbar .toolbar-left {
+ float: left;
+ padding: 0 5px;
+}
+#toolbar .toolbar-icon {
+ background: no-repeat center / auto 20px!important;
+ width: 25px!important;
+ height: 25px!important;
+ border: none!important;
+ margin-top: 3px!important;
+ margin: 3px 2px!important;
+}
+#toolbar .toolbar-icon.ie {
+ background-image: url(https://win98icons.alexmeub.com/icons/png/msie1-4.png)!important;
+}
+#toolbar .toolbar-icon.outlook {
+ background-image: url(https://win98icons.alexmeub.com/icons/png/outlook_express-0.png)!important;
+}
+#toolbar .toolbar-icon.desktop {
+ background-image: url(https://win98icons.alexmeub.com/icons/png/desktop-4.png)!important;
+}
+#toolbar .toolbar-right {
+ float: right;
+ margin: 2px 3px;
+ height: 29px;
+ border: 2px solid #7c7c7c;
+ border-bottom-color: #fff;
+ border-right-color: #fff;
+}
+#toolbar .toolbar-right .time {
+ padding: 6px 10px;
+}
+
+
+/* NOTEPAD */
+.menubar {
+list-style-type: none;
+display:flex;
+padding: 0px;
+margin: 5px;
+}
+.menubar li {
+padding-right: 20px;
+font-size: 13px!important;
+}
+.card-body {
+font-size: 13px!important;  
+padding: 3px 6px;
+box-shadow: inset -1px -1px #fff,inset 1px 1px grey,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;
+background-color: #fff;
+box-sizing: border-box;
+   border-top: 2px solid #BDBDBD;
+   border-left: 3px solid #BDBDBD;
+   border-right: 3px solid #BDBDBD;
+   border-bottom: 2px solid #bdbdbd;
+}
+
+.card-body li {
+  font-size: 13px!important;
+font-family: Ms sans-serif!important;
+}
+.card-body p {
+-webkit-font-smoothing: auto!important;
+font-smooth: always!important;
+font-size: 13px!important;
+font-family: Ms sans-serif!important;
+}
+
+
+/* MEDIA PLAYER */
+.mediaplayer {
+position: relative;
+margin-top: 20px;
+}
+
+.winamp{
+  background:url(https://subtlepatterns.com/patterns/broken_noise.png);
+  font-family:Arial!important;
+  width:400px;
+  box-shadow:0px 5px 5px #000;
+  background: -webkit-linear-gradient(left, #1a1927 0%,#353551 53%,#21212d 100%);
+  border: 2px ridge #7E7E7E;
+  margin:0px auto;
+}
+.player{
+  border: 3px groove #7E7E7E;
+  margin:3px;
+  margin-top:0px;
+  height:125px;
+}
+.player.spotify{
+  height:100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  background: black;
+  max-height: 407px;
+}
+.header{
+  font-weight:bold;
+  color:#fff;
+  font-size:11px;
+  text-align:center;
+}
+.header:before{
+  background: -webkit-linear-gradient(top, #fffcdf 0%,#fffcdf 29%,#736c50 32%,#736c50 66%,#d5ceb1 69%,#d5ceb1 100%);
+  content: '';
+  height: 8px;
+  width: 390px;
+  display: block;
+  margin-top: 2px;
+  position: absolute;
+  margin-left: 5px;
+  z-index: 0;
+}
+.header:after{
+  content: 'WINAMP';
+  display: block;
+  margin-top: -12px;
+  position: absolute;
+  margin-left: 160px;
+  background: #353551;
+  padding: 0px;
+  width: 70px;
+}
+.header.spotify:after {
+  content: 'PLAYLIST';
+}
+.vis{
+  width: 30%;
+  height: 50px;
+  background: #0F0F0F;
+  margin: 8px 3px 3px 5px;
+  border: 1px inset #69667B;
+  float: left;
+  color: lime;
+  font-family: monospace;
+  font-size: 20px;
+  text-align: center;
+  padding: 3px 3px 0px 0px;
+}
+.title{
+  float: left;
+  width: 60%;
+  height: 15px;
+  margin-left: 3px;
+  text-align: left;
+  font-size: 10px;
+  text-indent: 5px;
+  color: #00ff00;
+}
+.inf{
+  border: 1px inset #69667B;
+  width: 15px;
+  height: 10px;
+  background: #0F0F0F;
+  float: left;
+  margin-left: 3px;
+
+  margin-right: 25px;
+}
+.inf:after{
+  content: 'Kbps';
+  font-size: 9px;
+  margin-left: 20px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+}
+.khz:after{
+  content: 'Khz';
+}
+.mono_stereo{
+  float: right;
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 15px;
+  margin-top: 4px;
+}
+.mono_stereo:after{
+  content:'stereo';
+  margin-left:5px;
+  text-shadow: 0px 0px 6px #00FF0F;
+  color: #20FF17;
+}
+.bar{
+  background: #C51B1E;
+  height: 7px;
+  width: 80px;
+  float: left;
+  padding-left: 20px;
+  margin-left: 5px;
+  margin-top: 8px;
+  box-shadow: 0px 0px 4px black inset;
+  border-radius: 2px;
+  border-bottom: 1px solid #858585;
+}
+.bar:after{
+  content: 'III';
+  background: #BBB;
+  font-size: 6px;
+  padding: 0px 2px;
+  margin-top: -1px;
+  position: absolute;
+  border: 2px outset white;
+  font-weight: bold;
+  box-shadow: 0px 0px 0px 1px black;
+}
+.blanced{
+  width: 35px;
+  margin-left: 6px;
+  background: #358A23;
+}
+.volume:after{
+  margin-left: 30px;
+}
+.blanced:after{
+  margin-left: 8px;
+}
+.btn{
+  background: #BBB;
+  font-size: 7px;
+  padding: 0px 1px 0px 7px;
+  border: 2px outset white;
+  font-weight: bold;
+  float: left;
+  color: #333;
+  margin-top: 4px;
+  margin-left: 1px;
+  max-width: 10px !important;
+}
+.ext:before{
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #686868;
+  position: absolute;
+  margin-left: -5px;
+  margin-top: 1px;
+}
+.left{
+  margin-left:9px;
+}
+.sidebar{
+  border: 2px inset #7E7E7E;
+  float: left;
+  height: 8px;
+  width: 97%;
+  margin: 5px;
+  margin-top: 5px;
+}
+.submit {
+float: left;
+margin: 5px;
+}
+
+.add-music-input  {
+padding: 3px!important;
+width: 236px!important;
+margin-left: 5px!important;
+outline: 0!important; 
+color: #00ff00!important;
+-webkit-text-fill-color:#00ff00!important;
+font-size: 11px!important;
+background: #000!important;
+border-top: 1px solid #1d1d2d!important;
+border-bottom: 1px solid #605f6a!important;
+border-left: 1px solid #1d1d2d!important;
+border-right: 1px solid #605f6a!important;
+font-family:Arial!important;
+-webkit-font-smoothing: auto!important;
+
+}
+.pbutton {
+  outline: 0!important;
+  background: #BBB!important;
+  height: 20px!important;
+  min-width: 10px!important;
+  font-size: 9px!important;
+  font-weight: bold!important;
+  text-transform: uppercase!important;
+  color: rgba(0, 0, 0, 0.6)!important;
+  padding: 0 9px!important;
+  font-family: Arial!important;
+}
+.pbutton:hover {
+background-color: #a7a7a7!important;
+}
+
+
+.iframe {
+filter: grayscale(100%);
+display: block;
+margin: auto;
+margin-top: 5px;
+width: 90%;
+}
+
+.ak {
+height: 0vh !important;
+}
+
+.ae.af.ag.ah.ai.aj.ak.al.am.an {
+height: 0vh !important;
+}
+
+
+
+/* INTERACTIVE CONTENT NOT BACKGROUND */
+.leftbox {
+display: flex;
+margin: 30px 45px;
+position: relative;
+padding: 20px 20px;
+background: hsla(0, 0%, 100%, .3);
+border-radius: 10px;
+box-shadow: 5px 3px 30px black;
+overflow: hidden;
+}
