@@ -11,7 +11,7 @@ function App() {
   //spotify link
   const spotifyLink = "https://open.spotify.com/embed/track/"
    //variable that holds the contract address after you deploy
-  const contractAddress = "0xe74d0fd186eA5E53B69F0Bb7597B75FA2fA863Df";
+  const contractAddress = "0xfFC7E8335588Bb21938F97Bd3b76A7539E5Bd6E7";
    //Create a variable here that references the abi content!
   const contractABI = abi;
   //state variable we use to store our user's public wallet.
@@ -40,12 +40,12 @@ function App() {
     const chainId = await ethereum.request({ method: 'eth_chainId' });    
     console.log("Current network", chainId);
     //check which network the wallet is connected on 
-    if(chainId != 4){
-      alert("90s Nostalgia Portal uses Rinkeby! You need to switch network if you want to see the music");
+    if(chainId != 5){
+      alert("90s Nostalgia Portal uses Goerli! You need to switch network if you want to see the music");
     };
      // request to switch the network to rinkeby if not on it
      const tx = await ethereum.request({method: 'wallet_switchEthereumChain', params:[{chainId: 
-      '0x4'}]}).catch()
+      '0x5'}]}).catch()
       if (tx) {
         console.log(tx)
       }
@@ -76,12 +76,12 @@ function App() {
     const chainId = await ethereum.request({ method: 'eth_chainId' });    
     console.log("Current network", chainId);
     //check which network the wallet is connected on 
-    if(chainId != 4){
-      alert("90s Nostalgia Portal uses Rinkeby! You need to switch network if you want to see the music");
+    if(chainId != 5){
+      alert("90s Nostalgia Portal uses Goerli! You need to switch network if you want to see the music");
     };
      // request to switch the network to rinkeby if not on it
      const tx = await ethereum.request({method: 'wallet_switchEthereumChain', params:[{chainId: 
-      '0x4'}]}).catch()
+      '0x5'}]}).catch()
       if (tx) {
         console.log(tx)
       }
@@ -150,7 +150,7 @@ const wave = async () => {
    const { ethereum } = window;
     try {
       if (ethereum) {
-        const provider = ethers.getDefaultProvider("rinkeby");
+        const provider = ethers.getDefaultProvider("goerli");
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, provider);
         //Call the getAllWaves method from your Smart Contract
         const waves = await wavePortalContract.getAllWaves();
@@ -243,7 +243,7 @@ useEffect(() => {
   //Function to call the total number of waves
   const getWaveCount = async () => {
     try {
-      const provider = ethers.getDefaultProvider("rinkeby");
+      const provider = ethers.getDefaultProvider("goerli");
       const wavePortalContract = new ethers.Contract(contractAddress, contractABI, provider);
       //Gets total songs minted from the smart contract
      let count = await wavePortalContract.getTotalWaves();
@@ -252,7 +252,7 @@ useEffect(() => {
       console.log("how many waves?")
    }
    catch(error){
-     console.log('UseEffect to see TOTAL WAVES try switching to rinkeby maybe', error)}
+     console.log('UseEffect to see TOTAL WAVES try switching to goerli maybe', error)}
  }
 
   useEffect(() => {
