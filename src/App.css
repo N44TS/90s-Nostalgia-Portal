@@ -255,6 +255,7 @@ margin-top: 20px;
   text-align: justify;
   background: black;
   max-height: 407px;
+  padding-bottom: 4px;
 }
 .header{
   font-weight:bold;
