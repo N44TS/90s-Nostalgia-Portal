@@ -332,9 +332,9 @@ useEffect(() => {
        { !loading ? (<h4>Please send me your favourite 90's era tunes, on the blockchain :)</h4>) : (<h3><img src={hourglass} />Minting please wait...</h3>) }
       <h5>HOW TO USE: </h5>
       <ul>
-      <li>Connect with Metamask, on the RINKEBY network.</li>
+      <li>Connect with Metamask, on the GOERLI network.</li>
       <li>Copy a song link from Spotify and paste it over in the box on the WINAMP simulator.</li> 
-      <li>Click 'submit' to add it to the playlist and be in with a (randomish) chance to win some (Rinkeby) Eth!</li>
+      <li>Click 'submit' to add it to the playlist and be in with a (randomish) chance to win some (Goerli) Eth!</li>
       <li>Watch the counter go up every time a song is submitted, and enjoy the tuuuunes.</li>
       </ul>
       <p>Frontend Web3 gets compared to Web1 so here's a throwback to remind us just how far we've come.</p>
@@ -410,7 +410,7 @@ useEffect(() => {
             {allWaves.map((wave, index) => {
           return (
             <div key={index}>
-           <div><iframe src="https://open.spotify.com" loading="lazy" className="iframe" src={wave.message} width="300" height="88" allowtransparency="true" allow="encrypted-media"></iframe></div>
+           <div><iframe src="https://open.spotify.com" loading="lazy" className="iframe" src={wave.message} width="300" height="80" allowtransparency="true" allow="encrypted-media"></iframe></div>
             </div>)
         })}
           </div>
